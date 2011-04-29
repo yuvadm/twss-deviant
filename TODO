@@ -1,0 +1,5 @@
+# download stanford parser
+# tag the erotica corpus (textfiles.com/sex/EROTICA)
+# download Brown corpus (already tagged)
+# make corpora generic (tag properly)
+# download SVM-python, fallback to WEKA
