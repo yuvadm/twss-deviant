@@ -1,12 +1,14 @@
 from brown import brown_collection
 from consts import SN, SN_
 
+MIN_NS = 10**-7
+
 def NS(noun):
     """Noun sexiness function
     Returns a real value measure of the maximum similarity
     a `noun` not in SN has to each noun in SN_
     """
-    # return 10**-7 for nouns that occur less than 200 times
+    # return MIN_NS for nouns that occur less than 200 times
     return brown_collection.tf_idf(noun, SN_)
 
 def AS(adj):
@@ -20,7 +22,7 @@ def AS(adj):
     return 0
 
 def VS(verb):
-    """Verb sexines function
+    """Verb sexiness function
     Returns a real value measure of how much more likely a verb 
     phrase `verb` is to appear in an erotic context than a
     nonerotic one
